@@ -56,8 +56,19 @@ body header ul a {
 }
 
 body header ul a li {
+  margin: 4px;
+  padding: 10px;
   list-style: none;
-  color: #ffbd35;
+  color: #fff;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: 0.125s ease-in-out;
+  transition: 0.125s ease-in-out;
+}
+
+body header ul a li:hover {
+  outline: 2px solid #ffaa00;
 }
 
 body footer {
@@ -441,16 +452,69 @@ body footer {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  header div {
+    display: block;
+    margin: 10px;
+    padding: 4px;
+    width: 40px;
+    height: 40px;
+    float: right;
+    background: #fff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  header div span {
+    margin: 2px auto;
+    width: 96%;
+    height: 8px;
+    background: #444;
   }
   header ul {
+    display: block;
+    height: 0px;
+    -ms-flex-preferred-size: 96%;
+        flex-basis: 96%;
+  }
+  header ul li {
     display: none;
-    visibility: hidden;
+  }
+  header .active {
+    display: block;
+    margin: auto;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    overflow: hidden;
+  }
+  header .active li {
+    display: block;
+    height: 60px;
+    width: 100%;
+    text-align: center;
+    line-height: 40px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    background: #3fa796;
+  }
+  header .active li a {
+    display: block;
   }
   .container .home {
     padding-top: auto;
