@@ -34,8 +34,16 @@ body {
             a {
                 text-decoration: none;
                 li {
+                    margin: 4px;
+                    padding: 10px;
                     list-style: none;
-                    color: #ffbd35;
+                    color: #fff;
+                    justify-content: center;
+                    transition: 0.125s ease-in-out;
+
+                }
+                li:hover{
+                    outline: 2px solid #ffaa00;
                 }
             }
         }
@@ -320,12 +328,62 @@ body {
         background: #000;
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
 
-        ul {
-            display: none;
-            visibility: hidden;
+        div{
+            display: block;
+            margin: 10px;
+            padding: 4px;
+            width: 40px;
+            height: 40px;
+            float: right;
+            background: #fff;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            span{
+                margin: 2px auto;
+                width: 96%;
+                height: 8px;
+                background: #444;
+            }
+        }
+    
+        ul{
+            display: block;
+            height: 0px;
+            // width: 0%;
+            flex-basis: 96%;
+            // flex-basis: 96%;
+            li{
+                display: none;
+            }
+        }
+
+         .active{
+            display: block;
+            margin: auto;
+            height: fit-content;
+            flex-basis: 100%;
+            // background: rgb(255, 255, 255);
+            overflow: hidden;
+            li{
+                display: block;
+                height: 60px;
+                width: 100%;
+                text-align: center;
+                line-height: 40px;
+                justify-content: center;
+                background: #3fa796;
+                a{
+                    display: block;
+                }
+            }
+
+            
+
         }
     }
 
